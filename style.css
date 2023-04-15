@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+
+    font-family: 'Ubuntu', sans-serif;
+    background-color: dodgerblue;
+}
+
+.container {
+    flex-grow: 1;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #00000059;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+}
+
+.timer:hover{
+    cursor: pointer;
+}
+.gameContainer {
+    margin-inline: auto;
+    width:fit-content;
+}
+
+.header {
+    background: rgb(10, 184, 255);
+    background: linear-gradient(90deg, rgba(10, 184, 255, 1) 0%, rgba(0, 212, 255, 1) 23%, rgba(10, 184, 255, 1) 50%, rgba(0, 206, 251, 1) 74%, rgba(10, 184, 255, 1) 100%);
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 35px;
+}
+
+.scoreBoard {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header p {
+    font-size: 20px;
+}
+
+.gameBoard {
+    --width: max(40vw, 350px);
+    --height: calc(60vh + 100px);
+    background-color: #6882a0;
+    width: var(--width);
+    height: var(--height);
+    flex-grow: 1;
+
+    display: grid;
+    --grid-width: 25;
+    --grid-height: 25;
+    grid-template: repeat(var(--grid-height), calc(var(--height) / var(--grid-height))) / repeat(var(--grid-width), calc(var(--width) / var(--grid-width)));
+}
+
+@media (max-width: 500px){
+    .gameBoard{
+        --height: calc(60vh + 20px)
+    }
+}
+
+@media ((min-width: 500px) and (max-width:800px)){
+    .gameBoard{
+        --height: calc(60vh + 20px)
+    }
+}
+
+
+
+.ball{
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.bat{
+    background-color: #497bc7;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.userBat{
+    grid-area: 1 / var(--grid-width) / auto / auto; /* To the back of the Board */
+    grid-row: 1 / 5;
+}
+
+.computerBat{
+    grid-row: 1 / 5;
+}
+
+.controlBoard{
+    display: none;
+    width: 100%;
+}
+
+@media (max-width: 500px){
+    .controlBoard{
+        display: block;
+    }
+}
+
+.controler{
+    padding: 10px;
+    font-size: 20px;
+    width: 49%;
+}

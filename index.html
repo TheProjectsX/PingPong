@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Ping Pong Ball</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="timer" id="timer">Click to Start</div>
+        <div class="gameContainer">
+            <div class="header">
+                <h1>Ping Pong!</h1>
+                <div class="scoreBoard">
+                    <p>Computer: <span id="computerScore">00</span></p>
+                    <p>User: <span id="userScore">00</span></p>
+                </div>
+            </div>
+            <div class="gameBoard">
+                <div class="ball" id="ball"></div>
+                <div class="bat userBat" id="userBat"></div>
+                <div class="bat computerBat" id="computerBat"></div>
+            </div>
+
+            <div class="controlBoard">
+                <button class="controler" id="upController">▲</button>
+                <button class="controler" id="downController">▼</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
