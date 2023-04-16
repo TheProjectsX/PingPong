@@ -5,27 +5,31 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
 
     font-family: 'Ubuntu', sans-serif;
     background-color: dodgerblue;
 }
 
+@media (width < 450px){
+    body{
+       justify-content: flex-start;
+       padding-top: 10%;
+    }
+}
+
 .container {
-    flex-grow: 1;
-    width: 100%;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .timer{
     font-size: 30px;
     font-weight: bold;
     background-color: #00000059;
+    color: white;
     padding: 10px 20px;
     border-radius: 10px;
     position: absolute;
