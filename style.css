@@ -17,7 +17,7 @@ body {
 @media (width < 450px){
     body{
        justify-content: flex-start;
-       padding-top: 10%;
+       padding-top: 10px;
     }
 }
 
